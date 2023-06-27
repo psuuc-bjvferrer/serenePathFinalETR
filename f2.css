@@ -1,0 +1,90 @@
+#nice{
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(44,48,49,1) 0%, rgba(44,48,49,1) 53%, rgba(44,48,49,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#shirt{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 115px 0px; 
+    background-position: -13px;
+}
+
+#hoodie{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+    background-position: 0px;
+}
+
+#cap{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+    background-position: -2px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: rgb(0, 204, 255);
+    background-color: rgb(0, 204, 255); 
+}
+
+.container{
+    max-width: 950px;
+}
+.card{
+    border-radius: 1rem;
+    box-shadow: 0px -10px 0px rgb(0, 247, 234);
+}
+@media(max-width:767px){
+    .card{
+        margin: 1rem 0.7rem 1rem;
+        max-width: 80vw;
+    }
+}
+img{
+    width: 6.2rem;
+    border-radius: 5rem;
+    margin: 1.3rem auto 1rem auto;
+}
+.col-md-4{
+    padding:0  0.5rem;
+}
+.card-title{
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-family: 'IM Fell French Canon SC';
+}
+.card-text{
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    color: rgb(82, 81, 81);
+    line-height: 1.4rem;
+}
+.footer{
+    border-top: none;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 2rem 0 1.4rem 0;
+    font-family: 'Varela Round';
+}
+#name{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#position{
+    font-size: 0.7rem;
+}
+a{
+    color: rgb(0, 247, 234);
+    font-weight: bold;
+}
+a:hover{
+    color: rgb(0, 247, 234);
+}

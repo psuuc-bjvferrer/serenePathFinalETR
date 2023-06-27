@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="styles1.css" />
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const form = document.querySelector('.form');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get form input values
+          const fullName = document.querySelector('input[name="fullName"]').value;
+          const email = document.querySelector('input[name="email"]').value;
+          const phoneNumber = document.querySelector('input[name="phoneNumber"]').value;
+          const birthDate = document.querySelector('input[name="birthDate"]').value;
+          const gender = document.querySelector('input[name="gender"]:checked');
+          const address = document.querySelector('input[name="address"]').value;
+          const country = document.querySelector('select[name="country"]').value;
+          const city = document.querySelector('input[name="city"]').value;
+          const region = document.querySelector('input[name="region"]').value;
+          const postalCode = document.querySelector('input[name="postalCode"]').value;
+
+          // Validate form fields
+          if (fullName === '') {
+            alert('Please enter your full name.');
+          } else if (email === '') {
+            alert('Please enter your email address.');
+          } else if (phoneNumber === '') {
+            alert('Please enter your phone number.');
+          } else if (birthDate === '') {
+            alert('Please enter your birth date.');
+          } else if (!gender) {
+            alert('Please select your gender.');
+          } else if (address === '') {
+            alert('Please enter your address.');
+          } else if (country === 'Country') {
+            alert('Please select your country.');
+          } else if (city === '') {
+            alert('Please enter your city.');
+          } else if (region === '') {
+            alert('Please enter your region.');
+          } else if (postalCode === '') {
+            alert('Please enter your postal code.');
+          } else {
+            // All fields are valid, you can proceed with form submission
+            form.submit();
+
+            alert('Registration successful!');
+
+            window.location.href='dashboard.html';
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section class="container">
+      <header>SerenePath</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" name="fullName" placeholder="Enter full name" required />
+        </div>
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" name="email" placeholder="Enter email address" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" name="phoneNumber" placeholder="Enter phone number" required />
+          </div>
+          <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" name="birthDate" placeholder="Enter birth date" required />
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" required />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" required />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" required />
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" name="address" placeholder="Enter street address" required />
+
+          <div class="column">
+            <div class="select-box">
+              <select name="country" required>
+                <option hidden>Country</option>
+                <option>Philippines</option>
+                <option>Japan</option>
+                <option>Canada</option>
+                <option>France</option>
+              </select>
+            </div>
+            <input type="text" name="city" placeholder="Enter your city" required />
+          </div>
+          <div class="column">
+            <input type="text" name="region" placeholder="Enter your region" required />
+            <input type="number" name="postalCode" placeholder="Enter postal code" required />
+          </div>
+        </div>
+        <div class="text-left mb-3">
+          <button id="submitButton" type="submit" class="btn btn-info btn-lg px-4 me-sm-3">Submit</button>
+        </div>
+      </form>
+    </section>
+    
+  </body>
+</html>
